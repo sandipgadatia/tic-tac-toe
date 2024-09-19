@@ -1,0 +1,105 @@
+/* Dark mode background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+  }
+  
+  /* Container for the game */
+  .game-container {
+    text-align: center;
+  }
+  
+  /* Title styling */
+  h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the Tic-Tac-Toe grid */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: #333;
+    border: 2px solid #444;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cell:hover {
+    background-color: #444;
+  }
+  
+  .cell.O {
+    color: #3498db; /* Light blue color for "O" */
+  }
+  
+  .cell.X {
+    color: #e74c3c; /* Red color for "X" */
+  }
+  
+  /* Button styling */
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Styling for the result label */
+  .result-label {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    z-index: 999; /* Overlay everything */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .result-label.show {
+    display: block;
+    opacity: 1;
+  }
+  
+  .result-label.hide {
+    opacity: 0;
+  }
+  
